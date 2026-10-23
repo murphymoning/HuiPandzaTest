@@ -27,7 +27,8 @@
 #'     averaged across the participant's 21 RI screens.}
 #' }
 #' @source Tytko, T., Hui, B., & Pand\enc{ž}{z}a, N. B. (2026).
-#'   ARTICLE TITLE. \emph{Modern Language Journal, 110}, 210-239.
+#'   The effect of multimodal input on L2 learners' reading comprehension:
+#'   A preregistered eye-tracking study. \emph{Modern Language Journal, 110}, 210-239.
 #'   \doi{10.1111/modl.70023}. Data: \url{https://osf.io/hq57n}.
 #'   License: TO CONFIRM (the OSF project lists no license as of
 #'   October 2026).
