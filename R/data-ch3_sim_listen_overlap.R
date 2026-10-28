@@ -1,0 +1,27 @@
+#' Simulated listening scores with overlapping confidence intervals
+#'
+#' Simulated data (not real learners): listening test scores for 20 ESL
+#' and 20 EFL learners. The two groups' 95\% confidence intervals overlap,
+#' yet a Welch t-test finds a significant difference (p = .049, 95\% CI of
+#' the difference from -7.19 to -0.01). Used in Chapter 3 (Code Block 3.4 and
+#' Figure 3.10).
+#'
+#' Scores were drawn from normal distributions (SD = 5; means 75 for ESL
+#' and 72.4 for EFL), using the first seed from 1 upward that gave a
+#' p-value within .002 of .05 (\code{set.seed(2)}). The ESL scores were
+#' then shifted so that the upper bound of the 95\% CI of the difference
+#' is exactly -0.01.
+#'
+#' @format A data frame with 40 rows and 2 variables:
+#' \describe{
+#'   \item{score}{Listening test score.}
+#'   \item{group}{Learner group: "ESL" (rows 1-20) or "EFL" (rows 21-40).}
+#' }
+#' @source Simulated for this book with the code for Figure 3.10. The
+#'   generating script is \code{data-raw/ch3_sim_listen_overlap.R} in the
+#'   package's source repository.
+#' @examples
+#' data("ch3_sim_listen_overlap")
+#' head(ch3_sim_listen_overlap)
+#' t.test(score ~ group, data = ch3_sim_listen_overlap)
+"ch3_sim_listen_overlap"

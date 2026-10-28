@@ -10,8 +10,7 @@
 #' Block 4.S1. Used in Chapter 4 (Code Blocks 4.3-4.12).
 #'
 #' @format A data frame with 65 rows (one per participant) and 4
-#'   variables. Participant P136 was excluded for below-chance
-#'   comprehension.
+#'   variables. Participant P136 is excluded, as in Code Block 4.S1.
 #' \describe{
 #'   \item{ID}{Participant ID (e.g., "P101").}
 #'   \item{comprehension}{Proportion of comprehension questions in the RI

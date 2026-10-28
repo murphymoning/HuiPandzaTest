@@ -6,8 +6,7 @@
 \title{Tytko, Hui, and Pand\enc{ž}{z}a (2026) reading plus image data}
 \format{
 A data frame with 65 rows (one per participant) and 4
-variables. Participant P136 was excluded for below-chance
-comprehension.
+variables. Participant P136 is excluded, as in Code Block 4.S1.
 \describe{
 \item{ID}{Participant ID (e.g., "P101").}
 \item{comprehension}{Proportion of comprehension questions in the RI

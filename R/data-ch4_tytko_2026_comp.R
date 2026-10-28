@@ -1,0 +1,24 @@
+#' Tytko, Hui, and Pand\enc{ž}{z}a (2026) comprehension item scores (raw)
+#'
+#' Raw file from Tytko, Hui, and Pand\enc{ž}{z}a (2026), as shared on the
+#' study's OSF page. Used in Chapter 4 (Code Block 4.S1 and exercise
+#' 4.7.2), which combines the four raw files
+#' (\code{ch4_tytko_2026_comp}, \code{ch4_tytko_2026_list},
+#' \code{ch4_tytko_2026_con}, \code{ch4_tytko_2026_et}) into
+#' participant-level data such as \code{ch4_tytko_2026_ri}.
+#'
+#' @format A data frame with 66 rows (one per participant, P101-P166) and
+#'   91 variables: \code{ID}, the participant ID (e.g., "P101"), and
+#'   \code{Q1} to \code{Q90}, the score on each comprehension question
+#'   (1 = correct, 0 = incorrect). Which condition (RO, RI, RIA) a
+#'   question belonged to depends on the participant's list: see
+#'   \code{ch4_tytko_2026_list} and \code{ch4_tytko_2026_con}. All
+#'   participants are included; Code Block 4.S1 removes participant P136
+#'   and item Q40 before analysis.
+#' @source See \code{ch4_tytko_2026_ri} for the full citation.
+#'   Original file: Comprehension.csv, \url{https://osf.io/hq57n}.
+#' @examples
+#' data("ch4_tytko_2026_comp")
+#' dim(ch4_tytko_2026_comp)
+#' ch4_tytko_2026_comp[1:3, 1:6]
+"ch4_tytko_2026_comp"

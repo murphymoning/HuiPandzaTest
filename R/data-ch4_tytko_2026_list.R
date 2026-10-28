@@ -1,0 +1,23 @@
+#' Tytko, Hui, and Pand\enc{ž}{z}a (2026) list assignment (raw)
+#'
+#' Raw file from Tytko, Hui, and Pand\enc{ž}{z}a (2026), as shared on the
+#' study's OSF page. Used in Chapter 4 (Code Block 4.S1 and exercise
+#' 4.7.2), which combines the four raw files
+#' (\code{ch4_tytko_2026_comp}, \code{ch4_tytko_2026_list},
+#' \code{ch4_tytko_2026_con}, \code{ch4_tytko_2026_et}) into
+#' participant-level data such as \code{ch4_tytko_2026_ri}.
+#'
+#' @format A data frame with 66 rows (one per participant) and 2 variables:
+#' \describe{
+#'   \item{ID}{Participant ID (e.g., "P101").}
+#'   \item{List}{The counterbalanced list the participant saw, "List1" to
+#'     "List6" (11 participants per list). Each list assigns the story's
+#'     parts to the three conditions in a different order; see
+#'     \code{ch4_tytko_2026_con}.}
+#' }
+#' @source See \code{ch4_tytko_2026_ri} for the full citation.
+#'   Original file: ListInfo.csv, \url{https://osf.io/hq57n}.
+#' @examples
+#' data("ch4_tytko_2026_list")
+#' table(ch4_tytko_2026_list$List)
+"ch4_tytko_2026_list"

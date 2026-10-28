@@ -1,0 +1,26 @@
+#' Tytko, Hui, and Pand\enc{ž}{z}a (2026) question conditions by list (raw)
+#'
+#' Raw file from Tytko, Hui, and Pand\enc{ž}{z}a (2026), as shared on the
+#' study's OSF page. Used in Chapter 4 (Code Block 4.S1 and exercise
+#' 4.7.2), which combines the four raw files
+#' (\code{ch4_tytko_2026_comp}, \code{ch4_tytko_2026_list},
+#' \code{ch4_tytko_2026_con}, \code{ch4_tytko_2026_et}) into
+#' participant-level data such as \code{ch4_tytko_2026_ri}.
+#'
+#' @format A data frame with 540 rows (6 lists x 90 questions) and 3
+#'   variables:
+#' \describe{
+#'   \item{List}{List, "List1" to "List6".}
+#'   \item{Q}{Comprehension question, "Q1" to "Q90", matching the columns
+#'     of \code{ch4_tytko_2026_comp}.}
+#'   \item{con}{The condition the question belonged to in that list,
+#'     lowercase: "ro" (reading only), "ri" (reading + image), or "ria"
+#'     (reading + image + audio). Each list has 30 questions per
+#'     condition. Code Block 4.S1 converts these to uppercase.}
+#' }
+#' @source See \code{ch4_tytko_2026_ri} for the full citation.
+#'   Original file: con.csv, \url{https://osf.io/hq57n}.
+#' @examples
+#' data("ch4_tytko_2026_con")
+#' table(ch4_tytko_2026_con$List, ch4_tytko_2026_con$con)
+"ch4_tytko_2026_con"
