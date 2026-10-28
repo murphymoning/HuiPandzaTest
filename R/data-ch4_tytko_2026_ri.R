@@ -33,9 +33,9 @@
 #'   License: TO CONFIRM (the OSF project lists no license as of
 #'   October 2026).
 #' @examples
-#' data("tytko_2026_ri")
-#' head(tytko_2026_ri)
-#' cor.test(~ integrative_saccades + comprehension, data = tytko_2026_ri)
-"tytko_2026_ri"
+#' data("ch4_tytko_2026_ri")
+#' head(ch4_tytko_2026_ri)
+#' cor.test(~ integrative_saccades + comprehension, data = ch4_tytko_2026_ri)
+"ch4_tytko_2026_ri"
 
 

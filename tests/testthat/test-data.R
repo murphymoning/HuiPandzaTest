@@ -1,5 +1,5 @@
-test_that("tytko_2026_ri matches Chapter 4 (Code Blocks 4.3-4.12)", {
-  d <- tytko_2026_ri
+test_that("ch4_tytko_2026_ri matches Chapter 4 (Code Blocks 4.3-4.12)", {
+  d <- ch4_tytko_2026_ri
   expect_equal(dim(d), c(65, 4))
   expect_named(d, c("ID", "comprehension", "dwell_image", "integrative_saccades"))
   expect_false(anyNA(d))
@@ -10,8 +10,8 @@ test_that("tytko_2026_ri matches Chapter 4 (Code Blocks 4.3-4.12)", {
 })
 
 
-test_that("sim_swahili matches Chapter 4 (Code Blocks 4.1-4.2)", {
-  s <- sim_swahili
+test_that("ch4_sim_swahili matches Chapter 4 (Code Blocks 4.1-4.2)", {
+  s <- ch4_sim_swahili
   expect_equal(dim(s), c(40, 3))
   expect_equal(s$Name[1:4], c("Jimin", "Jisoo", "Yuna", "P104"))
   r <- cor.test(s$time_hours, s$vocab_score)

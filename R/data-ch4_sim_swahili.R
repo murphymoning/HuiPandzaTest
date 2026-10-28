@@ -16,10 +16,10 @@
 #'   \item{vocab_score}{Vocabulary test score, in percent.}
 #' }
 #' @source Simulated for this book with the code for Figure 4.1. The
-#'   generating script is \code{data-raw/sim_swahili.R} in the package's
+#'   generating script is \code{data-raw/ch4_sim_swahili.R} in the package's
 #'   source repository.
 #' @examples
-#' data("sim_swahili")
-#' head(sim_swahili)
-#' cor.test(sim_swahili$time_hours, sim_swahili$vocab_score)
-"sim_swahili"
+#' data("ch4_sim_swahili")
+#' head(ch4_sim_swahili)
+#' cor.test(ch4_sim_swahili$time_hours, ch4_sim_swahili$vocab_score)
+"ch4_sim_swahili"
