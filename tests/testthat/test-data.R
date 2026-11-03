@@ -25,4 +25,5 @@ test_that("ch3_sim_listen_overlap matches Chapter 3 (Code Block 3.4)", {
   tt <- t.test(score ~ group, data = ch3_sim_listen_overlap)
   expect_equal(unname(tt$statistic), -2.030819, tolerance = 1e-6)
   expect_equal(tt$conf.int[1:2], c(-7.190170, -0.01), tolerance = 1e-6)
-})
+  sp <- cor.test(~ dwell_image + comprehension, data = d, method = "spearman", exact = FALSE)
+  expect_equal(unname(sp$estimate), 0.0314625, tolerance = 1e-6)})

@@ -70,7 +70,12 @@ build <- function(cond) {
            integrative_saccades = mean_integrative_saccades)
 }
 
-ch4_tytko_2026 <- bind_rows(build("RI"), build("RIA")) %>% as.data.frame()
+ch4_tytko_2026 <- bind_rows(build("RI"), build("RIA")) %>%
+  # Round away floating-point noise (~1e-15) so that tied scores stay tied;
+  # otherwise rank-based results (Spearman, Code Block 4.13) shift slightly
+  mutate(across(c(comprehension, dwell_image, integrative_saccades),
+                ~ round(.x, 10))) %>%
+  as.data.frame()
 
 # Checks before saving
 print(dim(ch4_tytko_2026))            # 130 5
