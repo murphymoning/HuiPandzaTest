@@ -9,6 +9,8 @@ test_that("ch4_tytko_2026 matches Chapter 4 (Code Blocks 4.6-4.14)", {
   r <- cor.test(~ integrative_saccades + comprehension, data = d)
   expect_equal(unname(r$estimate), 0.3812491, tolerance = 1e-6)
   expect_equal(r$conf.int[1:2], c(0.1514310, 0.5719634), tolerance = 1e-6)
+  sp <- cor.test(~ dwell_image + comprehension, data = d, method = "spearman", exact = FALSE)
+  expect_equal(unname(sp$estimate), 0.0314625, tolerance = 1e-6)
 })
 
 test_that("ch4_sim_swahili matches Chapter 4 (Code Blocks 4.1-4.2)", {
@@ -25,5 +27,4 @@ test_that("ch3_sim_listen_overlap matches Chapter 3 (Code Block 3.4)", {
   tt <- t.test(score ~ group, data = ch3_sim_listen_overlap)
   expect_equal(unname(tt$statistic), -2.030819, tolerance = 1e-6)
   expect_equal(tt$conf.int[1:2], c(-7.190170, -0.01), tolerance = 1e-6)
-  sp <- cor.test(~ dwell_image + comprehension, data = d, method = "spearman", exact = FALSE)
-  expect_equal(unname(sp$estimate), 0.0314625, tolerance = 1e-6)})
+  })
