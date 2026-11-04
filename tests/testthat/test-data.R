@@ -28,3 +28,14 @@ test_that("ch3_sim_listen_overlap matches Chapter 3 (Code Block 3.4)", {
   expect_equal(unname(tt$statistic), -2.030819, tolerance = 1e-6)
   expect_equal(tt$conf.int[1:2], c(-7.190170, -0.01), tolerance = 1e-6)
   })
+
+test_that("ch5_sim_wm_read matches Chapter 5 (Code Blocks 5.1-5.3)", {
+  d <- ch5_sim_wm_read
+  expect_equal(dim(d), c(10000, 3))
+  expect_equal(sum(d$in_sample), 50)
+  expect_equal(cor(d$WM, d$reading), 0.3, tolerance = 1e-6)
+  s <- subset(d, in_sample, select = c(WM, reading))
+  m1 <- lm(reading ~ WM, data = s)
+  expect_equal(unname(coef(m1)), c(60.149279, 0.216833), tolerance = 1e-6)
+  expect_equal(s$reading[3], 70.2041, tolerance = 1e-4)
+})

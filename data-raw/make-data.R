@@ -1,10 +1,6 @@
 ch3_kakitani_2024 <- read.csv("data-raw/ch3_kakitani_2024.csv")
 usethis::use_data(ch3_kakitani_2024, overwrite = TRUE)
 
-
-ch5_fake <- read.csv("data-raw/ch5_fake.csv")
-usethis::use_data(ch5_fake, overwrite = TRUE)
-
 # Chapter 4: Tytko, Hui, & Pandža (2026), RI and RIA conditions
 # (Section 4.6, exercise 4.7.2). Generated once by data-raw/ch4_tytko_2026.R
 ch4_tytko_2026 <- read.csv("data-raw/ch4_tytko_2026.csv")
@@ -20,3 +16,9 @@ usethis::use_data(ch4_sim_swahili, overwrite = TRUE)
 # Generated once by data-raw/ch3_sim_listen_overlap.R
 ch3_sim_listen_overlap <- read.csv("data-raw/ch3_sim_listen_overlap.csv")
 usethis::use_data(ch3_sim_listen_overlap, overwrite = TRUE)
+
+
+# Chapter 5: simulated working memory and reading (Code Blocks 5.1-5.3)
+# Generated once by data-raw/ch5_sim_wm_read.R
+ch5_sim_wm_read <- read.csv("data-raw/ch5_sim_wm_read.csv")
+usethis::use_data(ch5_sim_wm_read, overwrite = TRUE)
